@@ -4,9 +4,16 @@
              x:Class="T_ShirtOrderingApp.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="AliceBlue" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to T-Shirt ordering App" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
         </Frame>
+        <Entry Placeholder="Name" x:Name="nameEntry"/>
+        <Entry Placeholder="Gender" x:Name="genderEntry"/>
+        <Entry Placeholder="T-Shirt Size" x:Name="TsizeEntry"/>
+        <Entry Placeholder="Date of Order" x:Name="dateOdreEntry"/>
+        <Entry Placeholder="T-Shirt Color" x:Name="TSirtColorEntry"/>
+        <Entry Placeholder="Shipping Address" x:Name="shippingEntry"/>
+        <Button Text="Place order" x:Name="saveButton" Clicked="SaveBottun_Clicked"/>
         <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
         <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
         <Label FontSize="16" Padding="30,24,30,0">
@@ -18,6 +25,7 @@
                     </FormattedString.Spans>
                 </FormattedString>
             </Label.FormattedText>
+            
         </Label>
     </StackLayout>
 
