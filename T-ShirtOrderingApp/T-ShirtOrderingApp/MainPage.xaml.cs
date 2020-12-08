@@ -7,31 +7,41 @@ using System.Threading.Tasks;
 using T_ShirtOrderingApp;
 using Xamarin.Forms;
 using SQLite;
+using System.IO;
 
 namespace T_ShirtOrderingApp
 {
     public partial class MainPage : ContentPage
     {
+        public CustomerDetails customer;
+
+        Orderdatabase Orderdatabase;
+
         public MainPage()
         {
             InitializeComponent();
+
+            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "order.db");
+
+            Orderdatabase = new Orderdatabase(path);
         }
-        void SaveBottun_Clicked(object sender, EventArgs e)
+
+        public void SaveBottun_Clicked(object sender, EventArgs e)
         {
-            CustomerDetails CustomerDetails = new CustomerDetails()
+            customer = new CustomerDetails
             {
                 Name = nameEntry.Text,
-                Gender = genderEntry.Text,
                 TShirtSize = TsizeEntry.Text,
-                DateofOrder = dateOdreEntry.Text,
-                TShirtColor = TSirtColorEntry.Text,
-                shippingAddress = shippingEntry.Text,
+                DateofOrder = DateTime.Now,
+                TshirtColor = tColorEntry.Text,
+                ShippingAddress = shippingEntry.Text
             };
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.CreateTable<CustomerDetails>();
-                int rowsAdded = conn.Insert(CustomerDetails);
+
+            var page = new Page1(customer);
+
+            Navigation.PushAsync(page);
             }
+            
         }
+
     }
-}

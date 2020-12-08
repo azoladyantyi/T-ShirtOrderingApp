@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T-ShirtOrderingApp.Android"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T-ShirtOrderingApp.iOS", "T-ShirtOrderingApp\T-ShirtOrderingApp.iOS\T-ShirtOrderingApp.iOS.csproj", "{3AAFB58C-76F5-44BE-BD1C-AA1DFCA9FEDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T-ShirtOrderingApp", "T-ShirtOrderingApp\T-ShirtOrderingApp\T-ShirtOrderingApp.csproj", "{4BD8842D-CC17-48BB-9BAD-BF332C847E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "T-ShirtOrderingApp", "T-ShirtOrderingApp\T-ShirtOrderingApp\T-ShirtOrderingApp.csproj", "{4BD8842D-CC17-48BB-9BAD-BF332C847E93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

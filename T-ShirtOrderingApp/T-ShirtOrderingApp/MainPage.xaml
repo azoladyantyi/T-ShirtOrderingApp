@@ -4,29 +4,35 @@
              x:Class="T_ShirtOrderingApp.MainPage">
 
     <StackLayout>
+        <!-- The tittle of the app-->
         <Frame BackgroundColor="AliceBlue" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to T-Shirt ordering App" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+            <Label Text="Welcome to Yolo's T-Shirt Shopping App" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
         </Frame>
+
         <Entry Placeholder="Name" x:Name="nameEntry"/>
-        <Entry Placeholder="Gender" x:Name="genderEntry"/>
+        <Picker Title="Select gender"
+        TitleColor="Gray" >
+            <Picker.Items>
+                <x:String>Female</x:String>
+                <x:String>Male</x:String>
+            </Picker.Items>
+        </Picker>
         <Entry Placeholder="T-Shirt Size" x:Name="TsizeEntry"/>
+        <Picker Title="Select size"
+        TitleColor="Gray" >
+            <Picker.Items>
+                <x:String>x-small</x:String>
+                <x:String>small</x:String>
+                <x:String>medium</x:String>
+                <x:String>large</x:String>
+                <x:String>x-large</x:String>
+                <x:String>xx-large</x:String>
+            </Picker.Items>
+        </Picker>
         <Entry Placeholder="Date of Order" x:Name="dateOdreEntry"/>
-        <Entry Placeholder="T-Shirt Color" x:Name="TSirtColorEntry"/>
+        <Entry Placeholder="T-Shirt Color" x:Name="tColorEntry"/>
         <Entry Placeholder="Shipping Address" x:Name="shippingEntry"/>
-        <Button Text="Place order" x:Name="saveButton" Clicked="SaveBottun_Clicked"/>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-            
-        </Label>
+        <Button Text="Place order" x:Name="saveButtonEntry" Clicked="SaveBottun_Clicked"/>
     </StackLayout>
 
 </ContentPage>

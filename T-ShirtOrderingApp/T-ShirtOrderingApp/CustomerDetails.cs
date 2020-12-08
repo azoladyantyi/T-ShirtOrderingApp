@@ -5,7 +5,7 @@ using System.Text;
 
 namespace T_ShirtOrderingApp
 {
-    class CustomerDetails
+    public class CustomerDetails
     {
         public int Id 
         { 
@@ -26,12 +26,15 @@ namespace T_ShirtOrderingApp
         public DateTime DateofOrder 
         {
             get; set; 
+        }   
+        public string TshirtColor
+        {
+            get; set;
         }
         public string ShippingAddress 
         {
             get; set; 
         }
-
 
     }
 }
