@@ -17,7 +17,6 @@
                 <x:String>Male</x:String>
             </Picker.Items>
         </Picker>
-        <Entry Placeholder="T-Shirt Size" x:Name="TsizeEntry"/>
         <Picker Title="Select size"
         TitleColor="Gray" >
             <Picker.Items>
