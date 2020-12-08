@@ -31,7 +31,6 @@ namespace T_ShirtOrderingApp
             customer = new CustomerDetails
             {
                 Name = nameEntry.Text,
-                TShirtSize = TsizeEntry.Text,
                 DateofOrder = DateTime.Now,
                 TshirtColor = tColorEntry.Text,
                 ShippingAddress = shippingEntry.Text
